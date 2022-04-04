@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="40dp"
+    tools:context=".JunctionActivity"
+    android:id="@+id/LLmain">
+
+    <TextView
+        android:id="@+id/dn"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Day and Night style"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:onClick="goInsert"
+        android:text="Insert new Pill" />
+
+    <Button
+        android:onClick="goView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="View DB" />
+</LinearLayout>
