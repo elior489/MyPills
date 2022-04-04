@@ -70,13 +70,13 @@ public class Pill {
 
     @Override
     public String toString() {
-        return "Pill{" +
+        return "Pill[" +
                 "name='" + name + '\'' +
-                ", code='" + code + '\'' +
-                ", batch='" + batch + '\'' +
-                ", company='" + company + '\'' +
-                ", exp=" + exp +
-                ", price=" + price +
-                '}';
+//                ",      code='" + code + '\'' +
+//                ",      batch='" + batch + '\'' +
+                ",      company='" + company + '\'' +
+                ",      exp=" + exp +
+//                ",      price=" + price +
+                ']';
     }
 }
