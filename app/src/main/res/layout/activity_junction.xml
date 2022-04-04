@@ -15,6 +15,7 @@
         android:id="@+id/dn"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:background="#ffffff"
         android:gravity="center"
         android:text="Day and Night style" />
 
