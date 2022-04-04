@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFAAA"
+    android:background="#E94E1B"
+    android:baselineAligned="false"
     android:padding="10dp"
-    tools:context=".ViewDataActivity"
-    android:baselineAligned="false">
+    tools:context=".ViewDataActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
         android:layout_weight="1"
         android:background="#000aaa"
-        android:padding="10dp"
-        android:layout_margin="5dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <ListView
             android:id="@+id/lvPills"
@@ -24,67 +24,67 @@
             android:layout_height="match_parent"
             android:background="#FFFFFF"
             android:divider="@color/colorAccent"
-            android:dividerHeight="2dp"/>
+            android:dividerHeight="2dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
         android:layout_weight="1"
         android:background="#000aaa"
-        android:padding="10dp"
-        android:layout_margin="5dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFFFFF"
-            android:padding="10dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <Button
-                android:onClick="viewAll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="viewAll"
                 android:text="All" />
 
             <Button
-                android:onClick="byCompany"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="byCompany"
                 android:text="By company" />
 
             <Button
-                android:onClick="byOldest"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="byOldest"
                 android:text="Oldest" />
 
             <Button
-                android:onClick="viewSum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="viewSum"
                 android:text="Sum (price)" />
 
             <Button
-                android:onClick="groupByCompany"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="groupByCompany"
                 android:text="Group by company" />
 
             <Button
-                android:onClick="groupByBatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="groupByBatch"
                 android:text="Group by Batch" />
 
             <Button
-                android:onClick="updateBatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="updateBatch"
                 android:text="Update Batch" />
 
         </LinearLayout>

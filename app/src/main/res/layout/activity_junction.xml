@@ -2,20 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LLmain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#E94E1B"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="40dp"
-    tools:context=".JunctionActivity"
-    android:id="@+id/LLmain">
+    tools:context=".JunctionActivity">
 
     <TextView
         android:id="@+id/dn"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="Day and Night style"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Day and Night style" />
 
     <Button
         android:layout_width="match_parent"
@@ -25,9 +26,9 @@
         android:text="Insert new Pill" />
 
     <Button
-        android:onClick="goView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:onClick="goView"
         android:text="View DB" />
 </LinearLayout>
