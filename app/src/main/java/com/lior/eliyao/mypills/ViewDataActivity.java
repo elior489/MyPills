@@ -17,7 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-
+import android.app.AlarmManager;
 import java.util.ArrayList;
 
 public class ViewDataActivity extends AppCompatActivity {
@@ -28,7 +28,7 @@ public class ViewDataActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     HelperDB hlp;
     SQLiteDatabase db;
-
+AlarmManager alarmManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -155,5 +155,9 @@ public class ViewDataActivity extends AppCompatActivity {
         if (id==1)
             viewAll(null);
         return true;
+    }
+
+    public void alarm(View view) {
+
     }
 }

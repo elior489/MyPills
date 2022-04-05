@@ -87,6 +87,13 @@
                 android:onClick="updateBatch"
                 android:text="Update Batch" />
 
+            <Button
+                android:id="@+id/BTalarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="alarm"
+                android:text="set alarm" />
+
         </LinearLayout>
 
     </LinearLayout>
