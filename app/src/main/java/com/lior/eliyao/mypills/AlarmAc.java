@@ -1,50 +1,51 @@
 package com.lior.eliyao.mypills;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static java.util.Calendar.AM;
+import static java.util.Calendar.PM;
 
-import android.view.View;
-import android.widget.TextView;
-import android.widget.TimePicker;
-import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextClock;
+import android.widget.TimePicker;
 
-import java.util.Calendar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class AlarmAc extends AppCompatActivity {
-    private TimePicker timePicker1;
-    private TextView time;
-    private Calendar calendar;
-    private String format = "";
+ private NotificationManagerCompat notificationManager ;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+         notificationManager= NotificationManagerCompat.from(this);
         setContentView(R.layout.activity_alarm);
-        timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
+    }
+    public void Sendnotif( View v){
 
     }
-    int hour = calendar.get(Calendar.HOUR_OF_DAY);
-    int min = calendar.get(Calendar.MINUTE);
 
-
-
-    public void setTime(View view) {
-        int hour = timePicker1.getCurrentHour();
-        int min = timePicker1.getCurrentMinute();
-        showTime(hour, min);
-    }
-
-    public void showTime(int hour, int min) {
-        if (hour == 0) {
-            hour += 12;
-            format = "AM";
-        } else if (hour == 12) {
-            format = "PM";
-        } else if (hour > 12) {
-            hour -= 12;
-            format = "PM";
-        } else {
-            format = "AM";
-        }
+    public void notif(View view) {
+        Notification notification = new NotificationCompat.Builder(this,app.CHANNEL_1_ID)
+                .setSmallIcon(R.drawable.ic_baseline_local_hospital_24)
+                .setContentTitle("take your pills ")
+                .setContentText("do not forget to take you meds")
+                .setCategory(NotificationCompat.CATEGORY_ALARM)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .build();
+        notificationManager.notify(1,notification);
 
     }
 }
+
+
