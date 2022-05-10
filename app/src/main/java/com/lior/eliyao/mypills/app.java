@@ -20,10 +20,9 @@ public static final String CHANNEL_1_ID = "channel1";
                     CHANNEL_1_ID,
                     "channel 1",
                     NotificationManager.IMPORTANCE_HIGH);
-channel1.setDescription("this is channel 1");
-NotificationManager manager =getSystemService(NotificationManager.class);
-manager.createNotificationChannel(channel1
-);
+                    channel1.setDescription("this is channel 1");
+                    NotificationManager manager =getSystemService(NotificationManager.class);
+manager.createNotificationChannel(channel1);
 
 
         }
