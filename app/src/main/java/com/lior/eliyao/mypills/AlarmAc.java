@@ -36,19 +36,26 @@ public class AlarmAc extends AppCompatActivity {
 //        notificationManager = NotificationManagerCompat.from(this);
         setContentView(R.layout.activity_alarm);
         Button button =findViewById(R.id.button);
+//        AlarmManager [] arr ={ null,null,null,null};
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
                     Intent intent =new Intent(AlarmAc.this,ReminderBroad.class);
                     PendingIntent pendingIntent =PendingIntent.getBroadcast(AlarmAc.this,0,intent ,0);
+
                     AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
                     long timeAtClick =System.currentTimeMillis();
-                    long tenSec = 1000*10;
-                    alarmManager.set(alarmManager.RTC_WAKEUP,timeAtClick,pendingIntent);
+                    long tenSec = 1000* 20;
+                    long oneMin =1000* 30;
+                    alarmManager.set(alarmManager.RTC_WAKEUP,timeAtClick+tenSec,pendingIntent);
+                    alarmManager.set(alarmManager.RTC_WAKEUP,timeAtClick+oneMin,PendingIntent.getBroadcast(AlarmAc.this,1,intent ,0));
+
 
                 }
             });
+
+
 
     }
 
